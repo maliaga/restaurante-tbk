@@ -1,9 +1,11 @@
 package cl.transbank.restaurant.app.service;
 
+import java.util.Date;
 import java.util.List;
 
 import cl.transbank.restaurant.app.dao.IVentaDao;
 import cl.transbank.restaurant.app.entity.Venta;
+import cl.transbank.restaurant.app.service.dto.VentaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -22,8 +24,13 @@ public class VentaServiceImpl implements IVentaService {
 
 	@Override
 	@Transactional
-	public Venta save(Venta venta) {
-		return ventaDao.save(venta);
-		
+	public Venta save(VentaDTO venta) {
+
+		Venta v = new Venta();
+		v.setNombre(venta.getNombre());
+		v.setDetalle(venta.getDetalle());
+		v.setCreateAt(new Date());
+
+		return ventaDao.save(v);
 	}
 }

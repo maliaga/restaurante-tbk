@@ -5,10 +5,11 @@ import java.util.List;
 import javax.validation.Valid;
 
 import cl.transbank.restaurant.app.entity.Venta;
+import cl.transbank.restaurant.app.service.dto.VentaDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import cl.transbank.restaurant.app.models.service.IVentaService;
+import cl.transbank.restaurant.app.service.IVentaService;
 
 @RestController
 @RequestMapping("/api")
@@ -23,7 +24,7 @@ public class VentaController {
 	}
 	
 	@PostMapping(value = "/ventas")
-	public Venta guardar(@Valid @RequestBody Venta venta) {
+	public Venta guardar(@Valid @RequestBody VentaDTO venta) {
 		return ventaService.save(venta);
 	}
 }
