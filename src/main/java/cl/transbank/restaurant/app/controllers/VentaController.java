@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.validation.Valid;
 
-import cl.transbank.restaurant.app.models.entity.Venta;
+import cl.transbank.restaurant.app.entity.Venta;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

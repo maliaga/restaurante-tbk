@@ -1,8 +1,8 @@
-package cl.transbank.restaurant.app.models.service;
+package cl.transbank.restaurant.app.service;
 
 import java.util.List;
 
-import cl.transbank.restaurant.app.models.entity.Venta;
+import cl.transbank.restaurant.app.entity.Venta;
 
 public interface IVentaService {
 	

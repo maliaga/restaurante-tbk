@@ -1,4 +1,4 @@
-package cl.transbank.restaurant.app.models.entity;
+package cl.transbank.restaurant.app.entity;
 
 import java.io.Serializable;
 import java.util.Date;
