@@ -11,6 +11,15 @@ public class VentaDTO implements Serializable {
     @NotEmpty
     private String detalle;
 
+    public VentaDTO() {
+    }
+
+    public VentaDTO(@NotEmpty String nombre,
+                    @NotEmpty String detalle) {
+        this.nombre = nombre;
+        this.detalle = detalle;
+    }
+
     public String getNombre() {
         return nombre;
     }
