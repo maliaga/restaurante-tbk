@@ -17,6 +17,9 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Clase de servicio para LOGIN
+ */
 @Service
 public class LoginUserDetailsService implements UserDetailsService {
 
@@ -24,7 +27,13 @@ public class LoginUserDetailsService implements UserDetailsService {
 	private IUsuarioDao usuarioDao;
 	
 	private Logger logger = LoggerFactory.getLogger(LoginUserDetailsService.class);
-	
+
+	/**
+	 * Metodo que valida si el usuario esta en la base de datos
+	 * @param username nombere del usuario
+	 * @return Detalle del Usuario encontrado
+	 * @throws UsernameNotFoundException error en la ejecución
+	 */
 	@Override
 	@Transactional(readOnly=true)
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {

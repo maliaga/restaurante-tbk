@@ -22,6 +22,11 @@ public class UserServiceImpl implements IUserService {
     private LoginUserDetailsService loginUserDetailsService;
 
 
+    /**
+     * M&eacute;todo que tiene la l&oacute;gica para validar si el usuario está en la base de datos
+     * @param loginDTO <code>usuario y password</code>
+     * @return password encriptado
+     */
     @Override
     public String login(LoginDTO loginDTO) {
 
